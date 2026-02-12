@@ -1,0 +1,70 @@
+{
+  "season": "2026",
+  "timeTrials": {
+    "tt1": {
+      "date": "2026-01-26",
+      "name": "Time Trial 1",
+      "description": "Qualifying round for tier placement"
+    },
+    "tt2": {
+      "date": "2026-01-26",
+      "name": "Time Trial 2",
+      "description": "Qualifying round for tier placement"
+    },
+    "tt3": {
+      "date": "2026-01-26",
+      "name": "Time Trial 3",
+      "description": "Final qualifying round for tier placement"
+    }
+  },
+  "standings": {
+    "tt1": {
+      "date": "2026-01-26",
+      "overallLeader": "Itay Sela",
+      "overallTime": "3:39.556",
+      "tier1": [
+        {"position": 1, "driver": "Itay Sela", "time": "3:39.556"},
+        {"position": 2, "driver": "Moti Kimchi", "time": "3:40.xxx"},
+        {"position": 3, "driver": "Jonathan Samuha", "time": "3:40.xxx"},
+        {"position": 4, "driver": "Amir Volinsky", "time": "3:41.xxx"},
+        {"position": 5, "driver": "Eliran Kadosh", "time": "3:42.xxx"},
+        {"position": 6, "driver": "Avi Shimshilashvili", "time": "3:43.xxx"},
+        {"position": 7, "driver": "Nir Maimon", "time": "3:44.xxx"},
+        {"position": 8, "driver": "Alexey Belkin", "time": "3:45.xxx"},
+        {"position": 9, "driver": "Haim Kleimerman", "time": "3:46.xxx"},
+        {"position": 10, "driver": "Yuri Kazakov", "time": "3:47.xxx"},
+        {"position": 11, "driver": "Kelly Aiche", "time": "3:48.xxx"},
+        {"position": 12, "driver": "Erez Ashtamker", "time": "3:49.xxx"},
+        {"position": 13, "driver": "Lidor Lessner", "time": "3:50.xxx"}
+      ],
+      "tier2": [
+        {"position": 1, "driver": "Andrew Slobodskoy", "time": "3:39.556"},
+        {"position": 2, "driver": "Dor Bazak", "time": "3:40.xxx"},
+        {"position": 3, "driver": "Dmitry Tokar", "time": "3:41.xxx"},
+        {"position": 4, "driver": "Anton Belinenson", "time": "3:42.xxx"},
+        {"position": 5, "driver": "Daniel Bakshi", "time": "3:43.xxx"},
+        {"position": 6, "driver": "Eli Konstantini", "time": "3:44.xxx"},
+        {"position": 7, "driver": "Matan Gal", "time": "3:45.xxx"},
+        {"position": 8, "driver": "Dmitri Maizenberg", "time": "3:46.xxx"},
+        {"position": 9, "driver": "Gal Haham", "time": "3:47.xxx"},
+        {"position": 10, "driver": "Liron Korenblat", "time": "3:48.xxx"},
+        {"position": 11, "driver": "Liam Kayner", "time": "3:49.xxx"},
+        {"position": 12, "driver": "Yuval Reikoren", "time": "3:50.xxx"}
+      ],
+      "tier3": [
+        {"position": 1, "driver": "Aviram Tovi", "time": "3:39.556"},
+        {"position": 2, "driver": "Nisan Lankry", "time": "3:40.xxx"},
+        {"position": 3, "driver": "Yonathan Rahum", "time": "3:41.xxx"},
+        {"position": 4, "driver": "Saar Zvi", "time": "3:42.xxx"},
+        {"position": 5, "driver": "Victor Gravitskii", "time": "3:43.xxx"},
+        {"position": 6, "driver": "Zohar Rabinov", "time": "3:44.xxx"},
+        {"position": 7, "driver": "Chen Simhony", "time": "3:45.xxx"},
+        {"position": 8, "driver": "Liron Bard", "time": "3:46.xxx"},
+        {"position": 9, "driver": "Dave Zichroni", "time": "3:47.xxx"},
+        {"position": 10, "driver": "Ben Fartouk", "time": "3:48.xxx"},
+        {"position": 11, "driver": "Yuval Haim", "time": "3:49.xxx"},
+        {"position": 12, "driver": "Ron Rugi", "time": "3:50.xxx"}
+      ]
+    }
+  }
+}

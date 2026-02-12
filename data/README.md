@@ -5,7 +5,8 @@
 ```
 data/
 ├── drivers.json       # Driver registry with tier/split assignments
-├── standings.json     # Current championship standings by tier
+├── standings.json     # Current standings (time trials + season)
+├── time-trials.json  # Time trial qualifying results
 ├── results.json       # Race results for all completed rounds
 ├── calendar.json      # Full season schedule
 ├── tracks.json        # Track information (18 circuits)
@@ -14,16 +15,44 @@ data/
 
 ---
 
+## Overview
+
+GTIL 2026 has two separate systems:
+
+1. **Time Trials (TT1, TT2, TT3)** — Qualifying rounds held Jan 26, 2026 to determine tier placement
+2. **Championship Season (R1–R18)** — Regular racing season starting Feb 5, 2026
+
+The 41 drivers were assigned to tiers (Split A/B/C) based on their time trial performance.
+
+---
+
 ## Schema Definitions
 
 ### drivers.json
 
-Driver registry with metadata and current points.
+Driver registry with time trial results and championship tier.
 
 ```json
 {
   "season": "2026",
   "totalDrivers": 41,
+  "timeTrials": {
+    "tt1": {
+      "date": "2026-01-26",
+      "name": "Time Trial 1",
+      "description": "Qualifying round for tier placement"
+    },
+    "tt2": {
+      "date": "2026-01-26",
+      "name": "Time Trial 2",
+      "description": "Qualifying round for tier placement"
+    },
+    "tt3": {
+      "date": "2026-01-26",
+      "name": "Time Trial 3",
+      "description": "Final qualifying round for tier placement"
+    }
+  },
   "drivers": [
     {
       "id": "driver-slug",
@@ -32,7 +61,10 @@ Driver registry with metadata and current points.
       "split": "A",
       "discordId": null,
       "nationality": null,
-      "points": 34  // Current season points
+      "username": null,
+      "ttPosition": 4,
+      "ttFastestLap": null,
+      "ttPoints": 0
     }
   ]
 }
@@ -44,56 +76,96 @@ Driver registry with metadata and current points.
 - `split`: Letter designation (A/B/C)
 - `discordId`: Optional: Discord user ID for linking
 - `nationality`: Optional: Country code (IL, US, etc.)
-- `points`: Current season points total (synced from standings.json)
+- `username`: Optional: Discord username for time trials (from image data)
+- `ttPosition`: Final position from time trial qualifying (1–41)
+- `ttFastestLap`: Fastest lap time for each track (optional)
+- `ttPoints`: Points from time trial system (optional)
 
 ---
 
 ### standings.json
 
-Current championship standings with position tracking.
+Contains both time trial qualifying standings and championship season standings.
 
 ```json
 {
   "season": "2026",
   "lastUpdated": "2026-02-07",
-  "tier1": {
-    "name": "Split A",
-    "standings": [
-      {
-        "position": 1,
-        "driver": "Driver Name",
-        "points": 34,
-        "change": 0
-      }
-    ],
-    "promotionZone": [],
-    "relegationZone": [13, 14]
+  "timeTrials": {
+    "tt1": { "date": "2026-01-26", "name": "Time Trial 1", "description": "Qualifying round" },
+    "tt2": { "date": "2026-01-26", "name": "Time Trial 2", "description": "Qualifying round" },
+    "tt3": { "date": "2026-01-26", "name": "Time Trial 3", "description": "Final qualifying round" }
   },
-  "tier2": {
-    "name": "Split B",
-    "standings": [...],
-    "promotionZone": [1, 2, 3],
-    "relegationZone": []
-  },
-  "tier3": {
-    "name": "Split C",
-    "standings": [...],
-    "promotionZone": [1, 2, 3],
-    "relegationZone": []
+  "standings": {
+    "timeTrials": {
+      "tt1": {
+        "date": "2026-01-26",
+        "overallLeader": "Itay Sela",
+        "overallTime": "3:39.556",
+        "tier1": [
+          {"position": 1, "driver": "Itay Sela", "time": "3:39.556"},
+          {"position": 2, "driver": "Moti Kimchi", "time": "3:40.xxx"},
+          ...
+        ]
+      },
+      "tier2": [...],
+      "tier3": [...]
+    }
   }
 }
 ```
 
 **Notes:**
-- `change`: 0 = no change, positive = moved down, negative = moved up
-- `promotionZone`: Top 3 positions (empty for Tier 1)
-- `relegationZone`: Bottom 3 positions (empty for Tier 3)
+- Time trial section shows qualifying results from TT1, TT2, TT3
+- Each tier has its own standings (top 14, middle 14, bottom 13)
+- Overall fastest times displayed
+- Season section can be added later for championship rounds (R1–R18)
+
+---
+
+### time-trials.json
+
+Complete time trial results (TT1, TT2, TT3) with full driver data.
+
+```json
+{
+  "season": "2026",
+  "timeTrials": {
+    "tt1": {
+      "date": "2026-01-26",
+      "name": "Time Trial 1",
+      "description": "Qualifying round for tier placement"
+    },
+    "tt2": { "date": "2026-01-26", "name": "Time Trial 2", "description": "Qualifying round" },
+    "tt3": { "date": "2026-01-26", "name": "Time Trial 3", "description": "Final qualifying round" }
+  },
+  "standings": {
+    "timeTrials": {
+      "tt1": {
+        "date": "2026-01-26",
+        "overallLeader": "Itay Sela",
+        "overallTime": "3:39.556",
+        "tier1": [...]
+      },
+      "tier2": [...],
+      "tier3": [...]
+    }
+  }
+}
+```
+
+**Notes:**
+- TT1 = Initial qualifying round
+- TT2 = Second qualifying round
+- TT3 = Final qualifying round
+- Overall leader is fastest time across all drivers
+- Each tier shows individual standings
 
 ---
 
 ### results.json
 
-Complete race results history with track linkage.
+Complete race results history for championship season (R1–R18).
 
 ```json
 {
@@ -103,7 +175,7 @@ Complete race results history with track linkage.
       "round": 1,
       "name": "Goodwood",
       "date": "2026-02-05",
-      "trackId": 1,  // Links to tracks.json
+      "trackId": 1,
       "track": "Goodwood",
       "car": "Mazda Roadster Touring Car",
       "format": "Sprint",
@@ -129,7 +201,7 @@ Complete race results history with track linkage.
 **Notes:**
 - `format`: "Sprint", "Race 100", "Double Points"
 - `pointsMultiplier`: 1 = standard, 2 = double, 3 = triple
-- `trackId`: Links to `tracks.json` (circuit metadata)
+- `trackId`: Links to `tracks.json`
 - Results include all finishers for each split
 
 ---
@@ -147,13 +219,13 @@ Full season schedule with race details and track linkage.
       "round": 1,
       "name": "Goodwood",
       "date": "2026-02-05",
-      "trackId": 1,  // Links to tracks.json
+      "trackId": 1,
       "track": "Goodwood",
       "car": "Mazda Roadster Touring Car",
       "format": "Sprint",
       "pointsMultiplier": 1,
-      "status": "completed",  // "completed" | "upcoming" | "cancelled"
-      "results": "R1 (Goodwood)"  // Reference to results section
+      "status": "completed",
+      "results": "R1 (Goodwood)"
     }
   ],
   "seasonClosingEvent": {
@@ -165,9 +237,10 @@ Full season schedule with race details and track linkage.
 ```
 
 **Notes:**
+- Time trials (TT1, TT2, TT3) are separate from championship rounds (R1–R18)
 - `status`: "completed" | "upcoming" | "cancelled"
-- `trackId`: Links to `tracks.json` (circuit metadata)
-- Points multipliers track special rounds (R6 = triple, many double)
+- `trackId`: Links to `tracks.json`
+- Points multipliers track special rounds
 
 ---
 
@@ -193,7 +266,7 @@ Track information for all circuits.
 **Notes:**
 - `type`: Circuit category (Historic, Street, Racing, Endurance, Speedway, etc.)
 - `location`: Real-world location for context
-- Track `id` maps to `calendar.json` round `trackId` field and `results.json` round `trackId` field
+- Track `id` maps to `calendar.json` round `trackId` field
 
 ---
 
@@ -202,17 +275,15 @@ Track information for all circuits.
 ### After Each Race
 
 1. **Update `calendar.json`:** Set race status to `"completed"`
-2. **Add to `results.json`:** Append new race results (with `trackId` linkage)
-3. **Recalculate `standings.json`:** Update positions, points, zones
-4. **Update `drivers.json`:** Sync `points` field with current totals
-5. **Update `lastUpdated`** in `standings.json`
+2. **Add to `results.json`:** Append new race results
+3. **Recalculate `standings.json`:** Update season standings by tier
+4. **Update `lastUpdated`** in `standings.json`
 
-### Before Season
+### For Time Trials
 
-1. **Initialize `drivers.json`:** Add all drivers with tier/split assignments (all `points` = 0)
-2. **Initialize `calendar.json`:** Populate full schedule with status "upcoming" and `trackId` for all rounds
-3. **Create empty `results.json`:** `{ "season": "2026", "races": [] }`
-4. **Create empty `standings.json`:** All drivers at 0 points
+1. **Update `drivers.json`:** Add `ttPosition`, `ttFastestLap`, `ttPoints`, `username` fields
+2. **Create/Update `time-trials.json`:** Record qualifying results
+3. **Update `standings.json`:** Update time trial standings
 
 ---
 
@@ -220,10 +291,10 @@ Track information for all circuits.
 
 - Total drivers in `drivers.json` should match sum of all split drivers
 - `standings.json` driver names should match `drivers.json`
-- `standings.json` `points` totals should match sum of results points
 - All rounds in `results.json` should exist in `calendar.json`
 - Status should match reality (completed races should have results)
 - `trackId` in `results.json`/`calendar.json` should match `id` in `tracks.json`
+- Time trial dates should match `timeTrials` section
 
 ---
 
