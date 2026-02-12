@@ -1,0 +1,114 @@
+{
+  "season": "2026",
+  "totalTracks": 18,
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Goodwood",
+      "location": "United Kingdom",
+      "type": "Historic Circuit"
+    },
+    {
+      "id": 2,
+      "name": "St. Croix B",
+      "location": "Saint Croix",
+      "type": "Street Circuit"
+    },
+    {
+      "id": 3,
+      "name": "Dragon Trail Gardens",
+      "location": "Japan",
+      "type": "Fictional Track"
+    },
+    {
+      "id": 4,
+      "name": "Sardegna A",
+      "location": "Italy",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 5,
+      "name": "Red Bull Ring (Short)",
+      "location": "Austria",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 6,
+      "name": "Monza",
+      "location": "Italy",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 7,
+      "name": "Nürburgring GP",
+      "location": "Germany",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 8,
+      "name": "Spa-Francorchamps",
+      "location": "Belgium",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 9,
+      "name": "Le Mans 24H",
+      "location": "France",
+      "type": "Endurance Circuit"
+    },
+    {
+      "id": 10,
+      "name": "Road Atlanta",
+      "location": "United States",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 11,
+      "name": "Gilles Villeneuve",
+      "location": "Canada",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 12,
+      "name": "Watkins Glen Long",
+      "location": "United States",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 13,
+      "name": "Laguna Seca",
+      "location": "United States",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 14,
+      "name": "Mount Panorama",
+      "location": "Australia",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 15,
+      "name": "Fuji Speedway (Full)",
+      "location": "Japan",
+      "type": "Speedway"
+    },
+    {
+      "id": 16,
+      "name": "Tokyo Expressway South",
+      "location": "Japan",
+      "type": "Street Circuit"
+    },
+    {
+      "id": 17,
+      "name": "Yas Marina Circuit",
+      "location": "United Arab Emirates",
+      "type": "Racing Circuit"
+    },
+    {
+      "id": 18,
+      "name": "Interlagos",
+      "location": "Brazil",
+      "type": "Racing Circuit"
+    }
+  ]
+}

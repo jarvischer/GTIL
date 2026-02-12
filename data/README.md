@@ -7,7 +7,9 @@ data/
 ├── drivers.json       # Driver registry with tier/split assignments
 ├── standings.json     # Current championship standings by tier
 ├── results.json       # Race results for all completed rounds
-└── calendar.json      # Full season schedule
+├── calendar.json      # Full season schedule
+├── tracks.json        # Track information (18 circuits)
+└── README.md         # This file
 ```
 
 ---
@@ -16,7 +18,7 @@ data/
 
 ### drivers.json
 
-Driver registry with metadata.
+Driver registry with metadata and current points.
 
 ```json
 {
@@ -28,8 +30,9 @@ Driver registry with metadata.
       "name": "Full Driver Name",
       "tier": 1,
       "split": "A",
-      "discordId": null,  // Optional: Discord user ID for linking
-      "nationality": null  // Optional: Country code (IL, US, etc.)
+      "discordId": null,
+      "nationality": null,
+      "points": 34  // Current season points
     }
   ]
 }
@@ -39,6 +42,9 @@ Driver registry with metadata.
 - `id` should be kebab-case of the driver name for URL routing
 - `tier`: 1 = Split A, 2 = Split B, 3 = Split C
 - `split`: Letter designation (A/B/C)
+- `discordId`: Optional: Discord user ID for linking
+- `nationality`: Optional: Country code (IL, US, etc.)
+- `points`: Current season points total (synced from standings.json)
 
 ---
 
@@ -57,11 +63,11 @@ Current championship standings with position tracking.
         "position": 1,
         "driver": "Driver Name",
         "points": 34,
-        "change": 0  // Position change from previous round
+        "change": 0
       }
     ],
-    "promotionZone": [],    // Positions eligible for promotion (empty for top tier)
-    "relegationZone": [13, 14]  // Positions at risk of relegation
+    "promotionZone": [],
+    "relegationZone": [13, 14]
   },
   "tier2": {
     "name": "Split B",
@@ -87,7 +93,7 @@ Current championship standings with position tracking.
 
 ### results.json
 
-Complete race results history.
+Complete race results history with track linkage.
 
 ```json
 {
@@ -97,6 +103,7 @@ Complete race results history.
       "round": 1,
       "name": "Goodwood",
       "date": "2026-02-05",
+      "trackId": 1,  // Links to tracks.json
       "track": "Goodwood",
       "car": "Mazda Roadster Touring Car",
       "format": "Sprint",
@@ -122,13 +129,14 @@ Complete race results history.
 **Notes:**
 - `format`: "Sprint", "Race 100", "Double Points"
 - `pointsMultiplier`: 1 = standard, 2 = double, 3 = triple
+- `trackId`: Links to `tracks.json` (circuit metadata)
 - Results include all finishers for each split
 
 ---
 
 ### calendar.json
 
-Full season schedule with race details.
+Full season schedule with race details and track linkage.
 
 ```json
 {
@@ -139,6 +147,7 @@ Full season schedule with race details.
       "round": 1,
       "name": "Goodwood",
       "date": "2026-02-05",
+      "trackId": 1,  // Links to tracks.json
       "track": "Goodwood",
       "car": "Mazda Roadster Touring Car",
       "format": "Sprint",
@@ -156,8 +165,35 @@ Full season schedule with race details.
 ```
 
 **Notes:**
-- `status` should be updated after each race
-- `results` populated after race completion
+- `status`: "completed" | "upcoming" | "cancelled"
+- `trackId`: Links to `tracks.json` (circuit metadata)
+- Points multipliers track special rounds (R6 = triple, many double)
+
+---
+
+### tracks.json
+
+Track information for all circuits.
+
+```json
+{
+  "season": "2026",
+  "totalTracks": 18,
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Goodwood",
+      "location": "United Kingdom",
+      "type": "Historic Circuit"
+    }
+  ]
+}
+```
+
+**Notes:**
+- `type`: Circuit category (Historic, Street, Racing, Endurance, Speedway, etc.)
+- `location`: Real-world location for context
+- Track `id` maps to `calendar.json` round `trackId` field and `results.json` round `trackId` field
 
 ---
 
@@ -166,14 +202,15 @@ Full season schedule with race details.
 ### After Each Race
 
 1. **Update `calendar.json`:** Set race status to `"completed"`
-2. **Add to `results.json`:** Append new race results
+2. **Add to `results.json`:** Append new race results (with `trackId` linkage)
 3. **Recalculate `standings.json`:** Update positions, points, zones
-4. **Update `lastUpdated`** in `standings.json`
+4. **Update `drivers.json`:** Sync `points` field with current totals
+5. **Update `lastUpdated`** in `standings.json`
 
 ### Before Season
 
-1. **Initialize `drivers.json`:** Add all drivers with tier/split assignments
-2. **Initialize `calendar.json`:** Populate full schedule with status "upcoming"
+1. **Initialize `drivers.json`:** Add all drivers with tier/split assignments (all `points` = 0)
+2. **Initialize `calendar.json`:** Populate full schedule with status "upcoming" and `trackId` for all rounds
 3. **Create empty `results.json`:** `{ "season": "2026", "races": [] }`
 4. **Create empty `standings.json`:** All drivers at 0 points
 
@@ -183,8 +220,10 @@ Full season schedule with race details.
 
 - Total drivers in `drivers.json` should match sum of all split drivers
 - `standings.json` driver names should match `drivers.json`
+- `standings.json` `points` totals should match sum of results points
 - All rounds in `results.json` should exist in `calendar.json`
 - Status should match reality (completed races should have results)
+- `trackId` in `results.json`/`calendar.json` should match `id` in `tracks.json`
 
 ---
 

@@ -5,6 +5,7 @@
       "round": 1,
       "name": "Goodwood",
       "date": "2026-02-05",
+      "trackId": 1,
       "track": "Goodwood",
       "car": "Mazda Roadster Touring Car",
       "format": "Sprint",
