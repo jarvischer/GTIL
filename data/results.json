@@ -1,0 +1,72 @@
+{
+  "season": "2026",
+  "races": [
+    {
+      "round": 1,
+      "name": "Goodwood",
+      "date": "2026-02-05",
+      "track": "Goodwood",
+      "car": "Mazda Roadster Touring Car",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "splits": [
+        {
+          "split": "A",
+          "tier": 1,
+          "results": [
+            {"position": 1, "driver": "Lidor Lessner", "points": 34},
+            {"position": 2, "driver": "Moti Kimchi", "points": 29},
+            {"position": 3, "driver": "Jonathan Samuha", "points": 26},
+            {"position": 4, "driver": "Amir Volinsky", "points": 23},
+            {"position": 5, "driver": "Eliran Kadosh", "points": 22},
+            {"position": 6, "driver": "Itay Sela", "points": 21},
+            {"position": 7, "driver": "Haim Kleimerman", "points": 19},
+            {"position": 8, "driver": "Yuri Kazakov", "points": 15},
+            {"position": 9, "driver": "Kelly Aiche", "points": 12},
+            {"position": 10, "driver": "Nir Maimon", "points": 11},
+            {"position": 11, "driver": "Erez Ashtamker", "points": 9},
+            {"position": 12, "driver": "Avi Shimshilashvili", "points": 8},
+            {"position": 13, "driver": "Alexey Belkin", "points": 7},
+            {"position": 14, "driver": "Harel Kaduri", "points": 2}
+          ]
+        },
+        {
+          "split": "B",
+          "tier": 2,
+          "results": [
+            {"position": 1, "driver": "Andrew Slobodskoy", "points": 34},
+            {"position": 2, "driver": "Dor Bazak", "points": 30},
+            {"position": 3, "driver": "Dmitry Tokar", "points": 26},
+            {"position": 4, "driver": "Anton Belinenson", "points": 23},
+            {"position": 5, "driver": "Daniel Bakshi", "points": 23},
+            {"position": 6, "driver": "Matan Gal", "points": 19},
+            {"position": 7, "driver": "Dmitri Maizenberg", "points": 17},
+            {"position": 8, "driver": "Eli Konstantini", "points": 15},
+            {"position": 9, "driver": "Gal Haham", "points": 13},
+            {"position": 10, "driver": "Liron Korenblat", "points": 11},
+            {"position": 11, "driver": "Liam Kayner", "points": 9},
+            {"position": 12, "driver": "Yuval Reikoren", "points": 8}
+          ]
+        },
+        {
+          "split": "C",
+          "tier": 3,
+          "results": [
+            {"position": 1, "driver": "Aviram Tovi", "points": 34},
+            {"position": 2, "driver": "Nisan Lankry", "points": 26},
+            {"position": 3, "driver": "Yonathan Rahum", "points": 26},
+            {"position": 4, "driver": "Saar Zvi", "points": 22},
+            {"position": 5, "driver": "Victor Gravitskii", "points": 21},
+            {"position": 6, "driver": "Zohar Rabinov", "points": 16},
+            {"position": 7, "driver": "Chen Simhony", "points": 15},
+            {"position": 8, "driver": "Liron Bard", "points": 12},
+            {"position": 9, "driver": "Ben Fartouk", "points": 10},
+            {"position": 10, "driver": "Itzhak Swissa", "points": 5},
+            {"position": 11, "driver": "Yuval Haim", "points": 3},
+            {"position": 12, "driver": "Ron Rugi", "points": 0}
+          ]
+        }
+      ]
+    }
+  ]
+}

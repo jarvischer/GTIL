@@ -1,0 +1,209 @@
+{
+  "season": "2026",
+  "totalRounds": 18,
+  "races": [
+    {
+      "round": 1,
+      "name": "Goodwood",
+      "date": "2026-02-05",
+      "track": "Goodwood",
+      "car": "Mazda Roadster Touring Car",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "completed",
+      "results": "R1 (Goodwood)"
+    },
+    {
+      "round": 2,
+      "name": "St. Croix B",
+      "date": "2026-02-12",
+      "track": "St. Croix B",
+      "car": "Honda NSX Concept (Gr.2)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 3,
+      "name": "Dragon Trail Gardens",
+      "date": "2026-02-19",
+      "track": "Dragon Trail Gardens",
+      "car": "Any Gr.3 (No BMW)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 4,
+      "name": "Sardegna A",
+      "date": "2026-02-26",
+      "track": "Sardegna A",
+      "car": "Any Gr.4 (No Citroen/Genesis)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 5,
+      "name": "Red Bull Ring (Short)",
+      "date": "2026-03-05",
+      "track": "Red Bull Ring Short",
+      "car": "Radical SR3 SL '13",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 6,
+      "name": "Monza",
+      "date": "2026-03-12",
+      "track": "Monza",
+      "car": "Ferrari 296 GT3 '23",
+      "format": "Race 100",
+      "pointsMultiplier": 3,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 7,
+      "name": "Nürburgring GP",
+      "date": "2026-03-19",
+      "track": "Nürburgring GP",
+      "car": "Any Gr.4 (German make)",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 8,
+      "name": "Spa-Francorchamps",
+      "date": "2026-04-16",
+      "track": "Spa-Francorchamps",
+      "car": "Dallara SF23 / Toyota",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 9,
+      "name": "Le Mans 24H",
+      "date": "2026-04-23",
+      "track": "Le Mans 24H",
+      "car": "Any Gr.1 (Hybrid)",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 10,
+      "name": "Road Atlanta",
+      "date": "2026-04-30",
+      "track": "Road Atlanta",
+      "car": "Any Gr.4 (American make)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 11,
+      "name": "Gilles Villeneuve",
+      "date": "2026-05-07",
+      "track": "Gilles Villeneuve",
+      "car": "Any Gr.3",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 12,
+      "name": "Watkins Glen Long",
+      "date": "2026-05-14",
+      "track": "Watkins Glen Long",
+      "car": "Porsche 911 GT3 RS '22",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 13,
+      "name": "Laguna Seca",
+      "date": "2026-05-28",
+      "track": "Laguna Seca",
+      "car": "Alpine A110 Premiere Edition '17",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 14,
+      "name": "Mount Panorama",
+      "date": "2026-06-04",
+      "track": "Mount Panorama",
+      "car": "Any Gr.4 (MR drivetrain)",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 15,
+      "name": "Fuji Speedway (Full)",
+      "date": "2026-06-11",
+      "track": "Fuji Speedway Full",
+      "car": "Any Gr.3 (Japan make)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 16,
+      "name": "Tokyo Expressway South (clockwise)",
+      "date": "2026-06-18",
+      "track": "Tokyo Expressway South",
+      "car": "Lexus LFA",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 17,
+      "name": "Yas Marina Circuit",
+      "date": "2026-06-25",
+      "track": "Yas Marina Circuit",
+      "car": "Any Gr.3 (MR drivetrain)",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    },
+    {
+      "round": 18,
+      "name": "Interlagos",
+      "date": "2026-07-02",
+      "track": "Interlagos",
+      "car": "Any Gr.4",
+      "format": "Double Points",
+      "pointsMultiplier": 2,
+      "status": "upcoming",
+      "results": null
+    }
+  ],
+  "seasonClosingEvent": {
+    "name": "Grand Final",
+    "date": "2026-07-16",
+    "description": "Season closing event"
+  }
+}

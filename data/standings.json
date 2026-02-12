@@ -1,0 +1,63 @@
+{
+  "season": "2026",
+  "lastUpdated": "2026-02-07",
+  "tier1": {
+    "name": "Split A",
+    "standings": [
+      {"position": 1, "driver": "Lidor Lessner", "points": 34, "change": 0},
+      {"position": 2, "driver": "Moti Kimchi", "points": 29, "change": 0},
+      {"position": 3, "driver": "Jonathan Samuha", "points": 26, "change": 0},
+      {"position": 4, "driver": "Amir Volinsky", "points": 23, "change": 0},
+      {"position": 5, "driver": "Eliran Kadosh", "points": 22, "change": 0},
+      {"position": 6, "driver": "Itay Sela", "points": 21, "change": 0},
+      {"position": 7, "driver": "Haim Kleimerman", "points": 19, "change": 0},
+      {"position": 8, "driver": "Yuri Kazakov", "points": 15, "change": 0},
+      {"position": 9, "driver": "Kelly Aiche", "points": 12, "change": 0},
+      {"position": 10, "driver": "Nir Maimon", "points": 11, "change": 0},
+      {"position": 11, "driver": "Erez Ashtamker", "points": 9, "change": 0},
+      {"position": 12, "driver": "Avi Shimshilashvili", "points": 8, "change": 0},
+      {"position": 13, "driver": "Alexey Belkin", "points": 7, "change": 0},
+      {"position": 14, "driver": "Harel Kaduri", "points": 2, "change": 0}
+    ],
+    "promotionZone": [],
+    "relegationZone": [13, 14]
+  },
+  "tier2": {
+    "name": "Split B",
+    "standings": [
+      {"position": 1, "driver": "Andrew Slobodskoy", "points": 34, "change": 0},
+      {"position": 2, "driver": "Dor Bazak", "points": 30, "change": 0},
+      {"position": 3, "driver": "Dmitry Tokar", "points": 26, "change": 0},
+      {"position": 4, "driver": "Anton Belinenson", "points": 23, "change": 0},
+      {"position": 5, "driver": "Daniel Bakshi", "points": 23, "change": 0},
+      {"position": 6, "driver": "Matan Gal", "points": 19, "change": 0},
+      {"position": 7, "driver": "Dmitri Maizenberg", "points": 17, "change": 0},
+      {"position": 8, "driver": "Eli Konstantini", "points": 15, "change": 0},
+      {"position": 9, "driver": "Gal Haham", "points": 13, "change": 0},
+      {"position": 10, "driver": "Liron Korenblat", "points": 11, "change": 0},
+      {"position": 11, "driver": "Liam Kayner", "points": 9, "change": 0},
+      {"position": 12, "driver": "Yuval Reikoren", "points": 8, "change": 0}
+    ],
+    "promotionZone": [1, 2, 3],
+    "relegationZone": []
+  },
+  "tier3": {
+    "name": "Split C",
+    "standings": [
+      {"position": 1, "driver": "Aviram Tovi", "points": 34, "change": 0},
+      {"position": 2, "driver": "Nisan Lankry", "points": 26, "change": 0},
+      {"position": 3, "driver": "Yonathan Rahum", "points": 26, "change": 0},
+      {"position": 4, "driver": "Saar Zvi", "points": 22, "change": 0},
+      {"position": 5, "driver": "Victor Gravitskii", "points": 21, "change": 0},
+      {"position": 6, "driver": "Zohar Rabinov", "points": 16, "change": 0},
+      {"position": 7, "driver": "Chen Simhony", "points": 15, "change": 0},
+      {"position": 8, "driver": "Liron Bard", "points": 12, "change": 0},
+      {"position": 9, "driver": "Ben Fartouk", "points": 10, "change": 0},
+      {"position": 10, "driver": "Itzhak Swissa", "points": 5, "change": 0},
+      {"position": 11, "driver": "Yuval Haim", "points": 3, "change": 0},
+      {"position": 12, "driver": "Ron Rugi", "points": 0, "change": 0}
+    ],
+    "promotionZone": [1, 2, 3],
+    "relegationZone": []
+  }
+}
