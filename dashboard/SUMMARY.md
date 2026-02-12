@@ -17,37 +17,49 @@
 - ✅ `tech-stack-decision.md` — Tech stack comparison (custom dev only)
 - ✅ `mvp-implementation-checklist.md` — 2-week sprint checklist
 - ✅ `lovable-analysis.md` — Detailed Lovable platform analysis
-- ✅ `replit-analysis.md` — Detailed Replit platform analysis
-- ✅ `infrastructure-options-final.md` — Complete comparison (Replit, Lovable, Base44, Softr, Glide, Airtable, custom dev)
-- ✅ `INFRASTRUCTURE_SUMMARY.md` — Quick decision matrix with all options
+- ✅ `infrastructure-options-final.md` — Complete comparison (all options including Lovable)
+- ✅ `INFRASTRUCTURE_SUMMARY.md` — Quick decision matrix (Lovable focus)
 - ✅ `SUMMARY.md` — This file (planning overview)
+
+### Rules
+- ✅ `league-rules.md` — League structure, points system, code of conduct
 
 ---
 
-## Quick Decisions Needed
+## Current Focus: Lovable
 
-### 1. Platform Choice (Pick One)
+We're focusing on **Lovable** as the primary platform choice.
 
-**Testing Strategy:**
-1. **Test Lovable first** (Day 1) — Top priority
-2. **Test Replit second** (Day 2) — Strong alternative
-3. **Test Base44 third** (Day 3, if both fail)
-4. **Softr + Airtable** (Backup if all 3 fail)
-5. **Custom Dev** (Fallback, 10–14 days)
+**Why Lovable:**
+- AI-powered full-stack development
+- Code ownership with GitHub sync
+- Simple natural language description
+- Built-in hosting, auth, database
+- 3–5 days to MVP if RTL/Hebrew works
 
-**Decision needed:** Which platform to test first? Lovable or Replit?
+**Backup options if Lovable fails:**
+- Softr + Airtable (5–7 days)
+- Base44 (3–5 days, less control)
+- Custom dev (10–14 days, fallback)
 
 ---
 
 ## Next Steps
 
-### Immediate (Before Testing)
+### Immediate: Test Lovable
 
-1. **Choose testing order:** Lovable first, then Replit
-2. **Sign up for chosen platform** (start with Lovable)
-3. **Describe GTIL app** in natural language
-4. **Test critical features:** RTL/Hebrew, data structure, multi-admin, GitHub sync
-5. **Make decision:** If works → build (3–5 days), if fails → test next
+1. **Sign up for Lovable** (free account)
+2. **Describe GTIL app** in natural language
+3. **Test RTL/Hebrew** — Can we set automatic RTL for Hebrew pages?
+4. **Test data structure** — Can we build drivers, standings, calendar, results?
+5. **Test multi-admin** — Can 3 admins collaborate on same project?
+6. **Test GitHub sync** — Can we export code to our repo?
+7. **Test public access** — Can app be shared with spectators without login?
+
+### Decision
+
+- **If Lovable works** → Build on Lovable (3–5 days to MVP)
+- **If Lovable fails** → Try Softr + Airtable (5–7 days)
 
 ---
 
@@ -70,41 +82,25 @@ When you approve git operations, the repo will include:
 
 **Files Added:**
 - `data/` — All JSON data files + README
-- `dashboard/` — PRD, specs, UI/UX design, research, tech stack, MVP checklist, Lovable/Replit analyses
-- `league-rules.md` — Renamed from RULES.md
-- `README.md` — Updated with schedule and driver rankings
+- `dashboard/` — PRD, specs, UI/UX design, research, Lovable analysis
+- `league-rules.md` — League structure and rules
+- `README.md` — Updated with schedule, driver rankings, documentation links
 
-**Next:** Once platform is chosen, create frontend repo and start coding.
+**Next:** Once Lovable is tested/confirmed, create frontend repo and start coding.
 
 ---
 
 ## Open Questions / Gaps
 
+- [ ] Lovable RTL/Hebrew support?
+- [ ] Lovable pricing for paid tiers?
 - [ ] Domain name? (GTIL.il or gtil.jarvischer.com or subdomain)
 - [ ] Discord bot integration needed now or later? (Post-MVP)
 - [ ] Mobile app needed now or later? (Post-MVP)
-- [ ] Historical seasons? (2026 only for MVP)
-- [ ] Driver avatars? (Names only for MVP)
-- [ ] Track images? (Text only for MVP)
 
 ---
 
-## Testing Timeline
-
-| Days | Task |
-|-------|-------|
-| **Day 1** | Test Lovable (RTL, data structure, multi-admin, GitHub) |
-| **Day 2** | Test Replit (RTL, data structure, multi-admin, GitHub, SSH, public) |
-| **Day 3** | Decision: Lovable ✅ OR Replit ✅ OR Test Base44 |
-| **Day 3–5** | If one works → Build on chosen platform |
-| **Day 3–7** | If all fail → Test Softr + Airtable |
-| **Day 7** | Decision: Softr ✅ OR ❓ OR ❓ |
-| **Day 8–14** | If no-code fails → Custom dev (fallback) |
-
-**Hard Deadline:** February 26, 2026 (R4 — Sardegna A)
-
----
-
-*Planning Summary Version: 2.0*
+*Planning Summary Version: 3.0*
 *Last Updated: February 12, 2026*
+*Focus: Lovable Platform*
 *Deadline: February 26, 2026 (MVP)*

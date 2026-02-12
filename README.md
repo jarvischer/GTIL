@@ -11,10 +11,6 @@ GTIL is a small website tracking the Grand Turismo championship in Israel — co
 
 🚧 **Early Development** — Vision still being drafted.
 
-## Tech Stack
-
-> To be defined
-
 ## 2026 Season Schedule
 
 ### February
@@ -60,6 +56,8 @@ GTIL is a small website tracking the Grand Turismo championship in Israel — co
 | R18 | Interlagos | 02/07/26 | Any Gr.4 | Double points |
 
 **Season Closing Event:** 16/07/26
+
+---
 
 ## Driver Rankings (Season 2026)
 
@@ -119,12 +117,20 @@ GTIL is a small website tracking the Grand Turismo championship in Israel — co
 
 ---
 
+## Tech Stack
+
+> To be defined
+
+---
+
 ## Features (Planned)
 
 - Driver standings and statistics
 - Race calendar and results
 - Championship points table
 - Historical race data
+
+---
 
 ## Getting Started
 
@@ -144,25 +150,27 @@ See `/data/README.md` for schema documentation.
 Planning and design docs are in `/dashboard/`:
 
 - `prd.md` — Product Requirements Document
-- `SUMMARY.md` — Quick planning overview and decisions needed
+- `SUMMARY.md` — Quick planning overview (Lovable focus)
 - `ui-ux-design.md` — Detailed UI/UX mockups
 - `admin-form-spec.md` — Admin form specification
 - `research-plan.md` — Research tasks (framework, hosting, i18n)
-- `tech-stack-decision.md` — Tech stack comparison
+- `tech-stack-decision.md` — Tech stack comparison (custom dev only)
 - `mvp-implementation-checklist.md` — 2-week sprint checklist
-- `infrastructure-options-research.md` — Original analysis (outdated, see infrastructure-options-final.md)
-- `infrastructure-options-final.md` — Complete comparison including Replit, Lovable, Base44, Softr, Glide, Airtable, custom dev
-- `INFRASTRUCTURE_SUMMARY.md` — Quick decision matrix with Replit added
-- `lovable-analysis.md` — Detailed analysis of Lovable platform
-- `replit-analysis.md` — Detailed analysis of Replit platform
+- `lovable-analysis.md` — Detailed Lovable platform analysis
+- `infrastructure-options-final.md` — Complete comparison (Lovable, Replit, Base44, Softr, Glide, Airtable, custom)
+- `INFRASTRUCTURE_SUMMARY.md` — Quick decision matrix (Lovable focus)
 
 ### Rules
 
 See `league-rules.md` for league structure, points system, and code of conduct.
 
+---
+
 ## Contributing
 
 > Guidelines TBD
+
+---
 
 ## License
 
