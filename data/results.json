@@ -68,6 +68,74 @@
           ]
         }
       ]
+    },
+    {
+      "round": 2,
+      "name": "St. Croix B",
+      "date": "2026-02-12",
+      "trackId": 2,
+      "track": "St. Croix B",
+      "car": "Honda NSX Concept (Gr.2)",
+      "format": "Sprint",
+      "pointsMultiplier": 1,
+      "splits": [
+        {
+          "split": "A",
+          "tier": 1,
+          "results": [
+            {"position": 1, "driver": "Lidor Lessner", "points": 32},
+            {"position": 2, "driver": "Moti Kimchi", "points": 26},
+            {"position": 3, "driver": "Haim Kleimerman", "points": 23},
+            {"position": 4, "driver": "Alexey Belkin", "points": 19},
+            {"position": 5, "driver": "Eliran Kadosh", "points": 18},
+            {"position": 6, "driver": "Yuri Kazakov", "points": 16},
+            {"position": 7, "driver": "Kelly Aiche", "points": 14},
+            {"position": 8, "driver": "Jonathan Samuha", "points": 12},
+            {"position": 9, "driver": "Itay Sela", "points": 10},
+            {"position": 10, "driver": "Nir Maimon", "points": 8},
+            {"position": 11, "driver": "Avi Shimshilashvili", "points": 6},
+            {"position": 12, "driver": "Erez Ashtamker", "points": 5},
+            {"position": 13, "driver": "Amir Volinsky", "points": 0},
+            {"position": 14, "driver": "Harel Kaduri", "points": 0}
+          ]
+        },
+        {
+          "split": "B",
+          "tier": 2,
+          "results": [
+            {"position": 1, "driver": "Dmitry Tokar", "points": 32},
+            {"position": 2, "driver": "Andrew Slobodskoy", "points": 26},
+            {"position": 3, "driver": "Dor Bazak", "points": 23},
+            {"position": 4, "driver": "Yuval Reikoren", "points": 18},
+            {"position": 5, "driver": "Eli Konstantini", "points": 18},
+            {"position": 6, "driver": "Daniel Bakshi", "points": 16},
+            {"position": 7, "driver": "Liron Korenblat", "points": 14},
+            {"position": 8, "driver": "Dmitri Maizenberg", "points": 12},
+            {"position": 9, "driver": "Gal Haham", "points": 10},
+            {"position": 10, "driver": "Matan Gal", "points": 8},
+            {"position": 11, "driver": "Liam Kayner", "points": 6},
+            {"position": 12, "driver": "Anton Beinenson", "points": 0}
+          ]
+        },
+        {
+          "split": "C",
+          "tier": 3,
+          "results": [
+            {"position": 1, "driver": "Itzhak Swissa", "points": 31},
+            {"position": 2, "driver": "Yuval Haim", "points": 22},
+            {"position": 3, "driver": "Saar Zvi", "points": 23},
+            {"position": 4, "driver": "Victor Gravitskii", "points": 20},
+            {"position": 5, "driver": "Nisan Lankry", "points": 18},
+            {"position": 6, "driver": "Aviram Tovi", "points": 17},
+            {"position": 7, "driver": "Zohar Rabinov", "points": 14},
+            {"position": 8, "driver": "Liron Bard", "points": 12},
+            {"position": 9, "driver": "Chen Simhony", "points": 10},
+            {"position": 10, "driver": "Yonathan Rahum", "points": 0},
+            {"position": 11, "driver": "Ben Fartouk", "points": 0},
+            {"position": 12, "driver": "Ron Rugi", "points": 0}
+          ]
+        }
+      ]
     }
   ]
 }
